@@ -4,18 +4,8 @@ import Footer from "./pages/Footer";
 import destinations from "./destinations";
 
 function App() {
-  const travelList = destinations.map((destination, index) => {
-    return (
-      <Travel
-        key={index}
-        img={destination.img}
-        country={destination.country}
-        url={destination.url}
-        title={destination.title}
-        dates={destination.dates}
-        text={destination.text}
-      />
-    );
+  const travelList = destinations.map((destination) => {
+    return <Travel key={destination.id} {...destination} />;
   });
   return (
     <>

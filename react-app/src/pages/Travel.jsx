@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import mapIcon from "../assets/map.png";
+import calendar from "../assets/calendar.png";
 
 export default function Travel(props) {
-  //   const { img, country, url, title, dates, text } = props;
-
   return (
     <>
       <article className='journal-entry'>
@@ -15,7 +14,10 @@ export default function Travel(props) {
           <span className='country'>{props.country}</span>
           <a href={props.url}>View on Google Maps</a>
           <h2 className='entry-title'>{props.title}</h2>
-          <p className='trip-dates'>{props.dates}</p>
+          <div className='calendar-container'>
+            <img src={calendar} alt='calendar icon' className='calendar' />
+            <p className='trip-dates'>{props.dates}</p>
+          </div>
           <p className='entry-text'>{props.text}</p>
         </div>
       </article>
